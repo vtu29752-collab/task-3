@@ -1,0 +1,21 @@
+import os
+import sys
+import platform
+import sysconfig
+print("os name", os.name)
+print(os.getcwd())
+print(os.listdir())
+print(os.getlogin())
+print("platform name", sys.platform)
+print("platform.system()", platform.system())
+print("platform.release()", platform.release())
+
+Output:
+os.name     nt
+/tmp/sessions/8ab062fead14b3db
+['main.py']
+<built-in function getlogin>
+posix.uname_result(sysname='Linux', nodename='5c10b58a99fb', release='5.11.0-1017-gcp', version='#19~20.04.1-Ubuntu SMP Thu Aug 12 05:25:25 UTC 2021', machine='x86_64')
+sys.platform            Win32
+platform.system()         Windows
+sys.release()     11
