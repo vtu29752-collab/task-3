@@ -1,0 +1,31 @@
+Here’s the structure:
+shop/
+    __init__.py
+    weight_calc.py
+main.py
+1. shop/weight_calc.py
+# weight_calc.py
+def calculate_total_weight(widgets, gizmos):
+    WIDGET_WEIGHT = 75   # grams
+    GIZMO_WEIGHT = 112   # grams
+    total_weight = (widgets * WIDGET_WEIGHT) + (gizmos * GIZMO_WEIGHT)
+    return total_weight
+2. shop/init.py
+# __init__.py
+# This makes 'shop' a package
+3. main.py
+# main.py
+from shop import weight_calc
+def main():
+    widgets = int(input("Enter the number of widgets: "))
+    gizmos = int(input("Enter the number of gizmos: "))
+    total_weight = weight_calc.calculate_total_weight(widgets, gizmos)
+    print(f"The total weight of the parts is {total_weight} grams.")
+if __name__ == "__main__":
+    main()
+
+Sample Input and Output
+Enter the number of widgets: 5
+Enter the number of gizmos: 3
+The total weight of the parts is 731 grams.
+
